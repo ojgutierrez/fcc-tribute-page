@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+   
+    body,html{
+        height:100%;
+        width:100%
+    }
+
+    .navbar-custom,body{
+        background-color:#000
+    }
+
+    .intro,body,html{
+        width:100%
+    }
+
+    body{
+        font-family:Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        color:#fff;
+        webkit-tap-highlight-color:rgba(255,255,255,.2)
+    }
+
+    .btn,.navbar-custom,h1,h2,h3,h4,h5,h6{
+        text-transform:uppercase;
+        font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        margin:0 0 35px;
+        font-weight:700;
+        letter-spacing:1px
+    }
+
+    p{
+        margin:0 0 25px;
+        font-size:18px;
+        line-height:1.5
+    }
+
+    @media (min-width:768px){
+        p{
+            margin:0 0 35px;
+            font-size:20px;
+            line-height:1.6
+        }
+    }
+
+    ax{
+        color:#42DCA3;
+        -webkit-transition:all .2s ease-in-out;
+        -moz-transition:all .2s ease-in-out;
+        transition:all .2s ease-in-out
+    }
+
+    a{
+        color:black;
+        -webkit-transition:all .2s ease-in-out;
+        -moz-transition:all .2s ease-in-out;
+        transition:all .2s ease-in-out
+    }
+    a:focus,a:hover{
+        text-decoration:none;
+        color:#1d9b6c
+    }
+
+    .light{
+        font-weight:400
+    }
+
+    .navbar-custom{
+        margin-bottom:0;
+        border-bottom:1px solid rgba(255,255,255,.3)
+    }
+
+    .navbar-custom .navbar-toggle{
+        color:#fff;
+        background-color:rgba(255,255,255,.2);
+        font-size:12px
+    }
+
+    .navbar-custom .nav li a:active,.navbar-custom .nav li a:focus,.navbar-custom .nav li a:hover{
+        background-color:transparent;
+        outline:0
+    }
+
+    .navbar-custom .navbar-toggle:active,.navbar-custom .navbar-toggle:focus{
+        outline:0
+    }
+
+    .navbar-custom .navbar-brand{
+        font-weight:700
+    }
+
+    .navbar-custom .navbar-brand:focus{
+        outline:0
+    }
+
+    .navbar-custom a{
+        color:#fff
+    }
+
+    .navbar-custom .nav li a{
+        -webkit-transition:background .3s ease-in-out;
+        -moz-transition:background .3s ease-in-out;
+        transition:background .3s ease-in-out
+    }
+
+    .navbar-custom .nav li a:hover{
+        color:rgba(255,255,255,.8)
+    }
+
+    .navbar-custom .nav li.active{
+        outline:0
+    }
+
+    .navbar-custom .nav li.active a{
+        background-color:rgba(255,255,255,.3)
+    }
+
+    .navbar-custom .nav li.active a:hover{
+        color:#fff
+    }
+
+    .featurette-divider {
+        margin: 80px 0;
+    }
+
+    .featurette {
+        overflow: hidden;
+    }
+
+    .featurette-image.pull-left {
+        margin-right: 40px;
+    }
+
+    .featurette-image.pull-right {
+        margin-left: 40px;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+    .featurette h3 {
+        text-shadow: 2px 2px 3px #000000;
+
+    }    
+
+    @media (min-width:768px){
+        .navbar-custom{
+            padding:20px 0;
+            border-bottom:none;
+            letter-spacing:1px;
+            background:0 0;
+            -webkit-transition:background .5s ease-in-out,padding .5s ease-in-out;
+            -moz-transition:background .5s ease-in-out,padding .5s ease-in-out;
+            transition:background .5s ease-in-out,padding .5s ease-in-out
+            }
+        .navbar-custom.top-nav-collapse{
+            padding:0;
+            background:#000;
+            border-bottom:1px solid rgba(255,255,255,.3)
+        }
+    }
+
+    .lead {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+
+
+
+    .intro{
+        display:table;
+        height:auto;
+        padding:100px 0;
+        text-align:center;
+        color:#fff;
+        background:url("http://img.rtve.es/v/3213338/") bottom center no-repeat #000;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        background-size:cover;
+        -o-background-size:cover
+    }
+
+    .intro .intro-body{
+        display:table-cell;
+        vertical-align:middle
+    }
+
+    .intro .intro-body .brand-heading{
+        font-size:40px
+    }
+
+    .intro .intro-body .intro-text{
+        font-size:18px
+    }
+
+    @media (min-width:768px){
+        .intro{
+            height:100%;
+            padding:0
+        }
+        .intro .intro-body .brand-heading{
+            font-size:100px
+        }
+        .intro .intro-body .intro-text{
+            font-size:26px
+        }
+    }
+
+    .btn-circle{
+        width:70px;
+        height:70px;
+        margin-top:15px;
+        padding:7px 16px;
+        border:2px solid #fff;
+        border-radius:100%!important;
+        font-size:40px;
+        color:#fff;
+        background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+        -webkit-transition:background .3s ease-in-out;
+        -moz-transition:background .3s ease-in-out;
+        transition:background .3s ease-in-out
+    }
+
+    .btn-circle:focus,.btn-circle:hover{
+        outline:0;
+        color:#fff;
+        background:rgba(255,255,255,.1)
+    }
+
+    .btn-circle i.animated{
+        -webkit-transition-property:-webkit-transform;
+        -webkit-transition-duration:1s;
+        -moz-transition-property:-moz-transform;
+        -moz-transition-duration:1s
+    }
+
+    .btn-circle:hover i.animated{
+        -webkit-animation-name:pulse;
+        -moz-animation-name:pulse;
+        -webkit-animation-duration:1.5s;
+        -moz-animation-duration:1.5s;
+        -webkit-animation-iteration-count:infinite;
+        -moz-animation-iteration-count:infinite;
+        -webkit-animation-timing-function:linear;
+        -moz-animation-timing-function:linear
+    }
+
+    @-webkit-keyframes pulse{
+        0%,100%{
+            -webkit-transform:scale(1);
+            transform:scale(1)
+        }
+        50%{
+            -webkit-transform:scale(1.2);
+            transform:scale(1.2)
+        }
+    }
+
+    @-moz-keyframes pulse{
+        0%,100%{
+            -moz-transform:scale(1);
+            transform:scale(1)
+        }
+        50%{
+            -moz-transform:scale(1.2);
+            transform:scale(1.2)
+        }
+    }
+
+    .content-section{
+        padding-top:100px
+    }
+
+    .download-section{
+        width:100%;
+        padding:50px 0;
+        color:#fff;
+        background:url(../img/downloads-bg.jpg) center center no-repeat #000;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        background-size:cover;
+        -o-background-size:cover
+    }
+
+    #map{
+        width:100%;
+        height:200px;
+        margin-top:100px
+    }
+
+    @media (min-width:767px){
+        .content-section{
+            padding-top:250px
+        }
+        .download-section{
+            padding:100px 0
+        }
+        #map{
+            height:400px;
+            margin-top:250px
+        }
+    }
+
+    .btn{
+        font-weight:400;
+        -webkit-transition:all .3s ease-in-out;
+        -moz-transition:all .3s ease-in-out;
+        transition:all .3s ease-in-out;
+        border-radius:0
+    }
+
+    .btn-default{
+        border:1px solid #42DCA3;
+        color:#42DCA3;
+        background-color:transparent;
+    }
+    .btn-default:focus,.btn-default:hover{
+        border:1px solid #42DCA3;outline:0;color:#000;
+        background-color:#42DCA3
+    }
+
+    ul.banner-social-buttons{
+            margin-top:0
+    }
+    @media (max-width:1199px){
+        ul.banner-social-buttons{
+            margin-top:15px
+        }
+    }
+    @media (max-width:767px){
+        ul.banner-social-buttons li{
+            display:block;
+            margin-bottom:20px;
+            padding:0
+        }
+        ul.banner-social-buttons li:last-child{
+            margin-bottom:0
+        }
+    }
+
+    footer{padding:50px 0}footer p{margin:0}::-moz-selection{text-shadow:none;background:#fcfcfc;background:rgba(255,255,255,.2)}::selection{text-shadow:none;background:#fcfcfc;background:rgba(255,255,255,.2)}img::selection{background:0 0}img::-moz-selection{background:0 0}  
+
+
+</style>
+
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alan Turing - Freecodecamp Tribute page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <script src="https://use.fontawesome.com/86619856e2.js"></script>
+
+
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#early">Early Life</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#university">University</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#war">II World War</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#last">Last Years</a>
+                    </li>                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading" style="color: white; text-shadow: 3px 3px 4px #000000" >Alan Touring</h1>
+                        <h2 style="color: white; text-shadow: 3px 3px 4px #000000"> Father of the Modern Computer</h2>
+                        <a href="#early" class="btn btn-circle" role="button"><i class="fa fa-angle-double-down animated"></i></a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="early">
+            <img class="featurette-image img-circle img-responsive pull-right" src="https://marjorieew.files.wordpress.com/2012/06/alan-turing-child-e1341097489225.jpg">
+            <h2 class="featurette-heading">Early Life</h2>
+            <h3>-1912-</h3>
+            <p class="lead" stylemargin: 0 0 30px 0>
+            Alan Mathison Turing born June 23 in Maida Vale, London, to Ethel Sara Turing (nee Stoney) and Julius Mathison Turing</p>
+            <h3>-1918-</h3>
+            <p class="lead">
+            Alan joins St Michael's day school in Hastings, where he does not do very well. He is sent to Hazelhurst Preparatory School when he is ten where he does much better and learns to play chess.</p> 
+            <h3>-1926-</h3>
+            <p class="lead">
+            Alan becomes a pupil at Sherborne School in Dorset. Alan is not interested in their traditional classical education as he really wants to spend his time doing Science and Mathematic</p> 
+            <h3>-1927-</h3>
+            <p class="lead">
+            Alan becomes deeply interested in the work of Albert Einstein and is able to develop work done by Einstein based on a questioning of Newton's Laws of Motion.</p>     <h3>-1928 .. 1930-</h3>
+            <p class="lead">
+            Alan enters 6th form at Sherborne and becomes great friends with Christopher Morcom, another talented boy who loves Maths and Science. While they are applying for university, Christopher suddenly dies. Alan is devastated</p>              
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="university">
+            <img class="featurette-image img-circle img-responsive pull-left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/20130808_Kings_College_Front_Court_Fountain_Crop_03.jpg/640px-20130808_Kings_College_Front_Court_Fountain_Crop_03.jpg">
+            <h2 class="featurette-heading">University and work on computability</h2>
+            <h3>-1931 .. 1934-</h3>
+            <p class="lead" stylemargin: 0 0 30px 0>
+            Alan becomes an undergraduate at King's College, Cambridge to study Mathematics. He enjoys university and is highly successful. He graduates with distinction.</p>
+            <h3>-1935-</h3>
+            <p class="lead">
+            Alan's work is so distinguished that he is elected Fellow of King's College, aged only 23.</p> 
+            <h3>-1938-</h3>
+            <p class="lead">
+            Alan goes to Princeton University in America to study mathematics and is awarded a PhD.</p> 
+            <h3>-1939-</h3>
+            <p class="lead">
+            September - Alan is asked to join the Government Codes and Ciphers School and arrives at Bletchley Park the day after war is declared. </p>            
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="war">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://www.rutherfordjournal.org/images/TAHC_Bombe.jpg">
+            <h2 class="featurette-heading">Second World War</h2>
+            <h3>-1939 .. 1940-</h3>
+            <p class="lead" stylemargin: 0 0 30px 0>
+            With Gordon Welchman, Alan develops the Bombe, a device for decrypting the messages sent by the Germans using their Enigma machine.</p>
+            <h3>-1940 .. 1942-</h3>
+            <p class="lead">
+            During 1942, Alan and his colleagues also manage to break the more complicated German Naval Enigma system. This is a tremendous help to the Allies in the Battle of the Atlantic.</p> 
+            <h3>-1943 .. 1945-</h3>
+            <p class="lead">
+            Alan is asked to work as a top level intelligence link with USA, which he visits to share information on cryptology (code-breaking).</p> 
+            <h3>-1945-</h3>
+            <p class="lead">
+            At the end of the war, Alan Turing is awarded the OBE for his wartime services.</p>   
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="last">
+            <img class="featurette-image img-circle img-responsive pull-right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Turing_Plaque.jpg/522px-Turing_Plaque.jpg">
+            <h2 class="featurette-heading">Last Years</h2>
+            <h3>-1946-</h3>
+            <p class="lead" stylemargin: 0 0 30px 0>
+            Alan joins the National Physical Laboratory, in Teddington and he publishes a paper with the first detailed design of a stored-program computer.</p>
+            <h3>-1948-</h3>
+            <p class="lead">
+            Alan's is appointed as as Reader in the Mathematics Department of Manchester University.</p> 
+            <h3>-1949-</h3>
+            <p class="lead">
+            Alan is made deputy director of the Computing Laboratory at Manchester University.</p> 
+            <h3>-1950-</h3>
+            <p class="lead">
+            Alan publishes'Computing Machinery and Intelligence' in which he develops the Turing Test, an attempt to define a standard for a machine to be called intelligent. The paper will become very famous.</p> 
+            <h3>-1951-</h3>
+            <p class="lead">
+            During his year, Alan is elected Fellow of the Royal Society FRS and also gives a talk about Artificial Intelligence on the BBC radio's Third Programme.</p>  
+            <h3>-1952-</h3>
+            <p class="lead">
+            January - Alan is arrested for gross indecency and loses his security clearance. He is offered chemical treatment as an alternative to imprisonment. The hormone treatment has a very detrimental effect on him.</p>  
+            <h3>-1954-</h3>
+            <p class="lead">
+            June 8th - Alan's body is found in his home in Wilmslow, Cheshire. The post-mortem finds that his death had been caused by poisoning. A half-eaten apple is found next to him laced with cyanide. Turing's body is cremated at Woking crematorium.</p>                          
+        </div>
+
+        <hr class="featurette-divider">
+
+<p>If you want to know more about this incredible human being, please go to his <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank">Wikipedia entry</a>.</p>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Written and Coded by Oswaldo Gutierrez</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
