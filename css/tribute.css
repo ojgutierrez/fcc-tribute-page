@@ -1,9 +1,21 @@
 
-    body,html{
+    main, body, html{
         height:100%;
         width:100%
     }
+    figure {
+      padding: 4px;
+      margin: auto;
+    }
 
+    figcaption {
+      padding: 2px;
+      text-align: center;
+    }
+
+    .img-circle {
+      width:100%
+    }
     .navbar-custom,body{
         background-color:#fff
     }
@@ -27,7 +39,7 @@
         margin:0 0 35px;
         font-weight:700;
         letter-spacing:1px
-        color: black;
+        color: black;  
     }
 
     p{
@@ -146,7 +158,7 @@
         text-shadow: 2px 2px 3px #000000;
         color : #555;
 
-    }
+    }    
 
     @media (min-width:768px){
         .navbar-custom{
@@ -183,11 +195,21 @@
         padding:100px 0;
         text-align:center;
         color:#fff;
-        background:url("http://img.rtve.es/v/3213338/") bottom center no-repeat #000;
+      /* Center and scale the image nicely */
+        background:url("https://img.rtve.es/v/3213338/");
+        background-position: center;
+        backgound-origin: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        backgound-color: #000;
         -webkit-background-size:cover;
         -moz-background-size:cover;
-        background-size:cover;
+
         -o-background-size:cover
+            /* Full height */
+        height: 100%;
+
+
     }
 
     .intro .intro-body{
@@ -304,12 +326,11 @@
         background-color:#42DCA3
     }
 
-
-
     footer{
       padding:50px 0
     }
-
+  
     footer p{
       margin:0
-    }::-moz-selection{text-shadow:none;background:#fcfcfc;background:rgba(255,255,255,.2)}::selection{text-shadow:none;background:#fcfcfc;background:rgba(255,255,255,.2)}img::selection{background:0 0}img::-moz-selection{background:0 0}
+    }::-moz-selection{text-shadow:none;background:#fcfcfc;background:rgba(255,255,255,.2)}::selection{text-shadow:none;background:#fcfcfc;background:rgba(255,255,255,.2)}img::selection{background:0 0}img::-moz-selection{background:0 0}  
+
